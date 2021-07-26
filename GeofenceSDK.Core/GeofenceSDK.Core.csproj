@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{942D3BCC-9960-4818-9E89-01DBF56F7DC2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>GeofenceSDK.Core</RootNamespace>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Common\Interface\" />
+    <Folder Include="Common\Models\" />
+  </ItemGroup>
+    <ItemGroup>
+    <EmbeddedResource Update="Resources\Config.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Config.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Config.Designer.cs">
+      <DependentUpon>Config.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\13.20.2.2\lib\mono\Xamarin.iOS\Facades\System.Drawing.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="AppPushSDK" Version="1.1.1" />
+  </ItemGroup>
+</Project>
