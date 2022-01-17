@@ -1,1 +1,1 @@
-# geofence-sdk
+# Geofence SDK kit for Xamarin Mobile Apps
